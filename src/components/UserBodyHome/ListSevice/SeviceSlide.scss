@@ -1,0 +1,60 @@
+.slider-container {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .slide-track {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); // Chia đều 6 cột
+    gap: 16px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .arrow-btn {
+    cursor: pointer;
+    font-size: 24px; // Kích thước chữ cho mũi tên
+    padding: 5px; // Giảm khoảng cách padding
+    border: none; // Không có viền
+    background: transparent; // Không có màu nền
+    color: #109b06; // Màu chữ
+    transition: color 0.3s ease; // Hiệu ứng chuyển màu khi hover
+  
+    &:hover {
+      color: #c70f0f; // Đổi màu khi hover
+    }
+  }
+  
+  
+  .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.5s ease-in-out;
+    height: 250px;  // Tùy chỉnh chiều cao của mỗi slide
+  }
+  
+  .slide img {
+    width: 100%;  // Đảm bảo hình ảnh chiếm hết chiều rộng
+    height: auto; // Giữ nguyên tỉ lệ hình ảnh
+    object-fit: cover; // Đảm bảo hình ảnh phù hợp với khung
+    border-radius: 8px;
+  }
+  @media (max-width: 768px) {
+    .slide-track {
+      grid-template-columns: repeat(2, 1fr); // Hiển thị 2 slide trên màn hình nhỏ
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .slide-track {
+      grid-template-columns: 1fr; // Hiển thị 1 slide trên màn hình rất nhỏ
+    }
+  }
+  

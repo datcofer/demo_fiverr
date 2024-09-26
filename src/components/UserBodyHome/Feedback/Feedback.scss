@@ -1,0 +1,46 @@
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .slide-content {
+    display: flex;
+    justify-content: space-between; /* Đảm bảo khoảng cách giữa video và text */
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .video-container {
+    flex: 1; /* Video chiếm 1 phần của vùng hiển thị */
+  }
+  
+  .text-container {
+    flex: 1; /* Text chiếm phần còn lại */
+    padding-left: 50px; /* Tạo khoảng cách giữa video và text */
+  }
+  
+  .text-content {
+    font-size: 1.5rem;
+    color: #333;
+    text-align: left; /* Căn chỉnh văn bản sang trái */
+  }
+  
+  .arrow-btn {
+    cursor: pointer;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    padding: 10px;
+    transition: color 0.3s;
+  }
+  
+  .arrow-btn:hover {
+    color: #555;
+  }
+  
